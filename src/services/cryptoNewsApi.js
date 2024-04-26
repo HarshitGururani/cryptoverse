@@ -8,14 +8,15 @@ const cryptoNewsHeader = {
 
 const baseUrl = 'https://cryptocurrency-news2.p.rapidapi.com';
 
-const createRequest = (url) => ({ url, headers: cryptoNewsHeader });
-
 export const cryptoNewsApi = createApi({
   reducerPath: 'cryptoNewsApi',
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getCryptoNews: builder.query({
-      query: () => createRequest(`/v1/coindesk`),
+      query: () => ({
+        url: '/v1/coindesk',
+        headers: cryptoNewsHeader,
+      }),
     }),
   }),
 });

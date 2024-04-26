@@ -4,7 +4,6 @@ import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import {
   Navbar,
-  Exchanges,
   Cryptocurrencies,
   News,
   HomePage,
@@ -21,8 +20,6 @@ const App = () => {
           <div className='routes'>
             <Routes>
               <Route path='/' element={<HomePage />} />
-
-              <Route path='/exchanges' element={<Exchanges />} />
 
               <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
 
